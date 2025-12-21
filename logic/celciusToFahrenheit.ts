@@ -1,5 +1,6 @@
 //This code convert from celcius temperature unit to fahrenheit
 import * as readline from "readline";
+import process from "process";
 let celcius: number = 0;
 let fahrenheit: number = 0;
 
