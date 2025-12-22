@@ -1,0 +1,1 @@
+//this code is to find if a word is a palindromo
