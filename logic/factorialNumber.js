@@ -22,7 +22,7 @@ rl.question("Please enter an integer: ", function (n) {
 });
 function getFactorial(n) {
     var result = 1;
-    for (var i = 0; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         result = result * i;
     }
     return result;
