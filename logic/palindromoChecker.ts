@@ -1,7 +1,5 @@
 //this code is to find if a word is a palindromo
 import * as readline from "readline";
-
-let word: string = "";
 let reverseWord: string = "";
 
 const rl = readline.createInterface({
