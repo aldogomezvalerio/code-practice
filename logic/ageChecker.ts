@@ -1,7 +1,6 @@
 //This program calculates if you have more than 18 years old
 import * as readline from "readline";
 let age: number = 0;
-let today: string = "";
 let birthDay: string = "";
 
 const rl = readline.createInterface({
