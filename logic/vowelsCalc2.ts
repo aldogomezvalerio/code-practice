@@ -7,9 +7,10 @@ const rl = readline.createInterface({
 });
 
 function countVowels(str: string): number {
-  const vowels = /aeiou/gi;
-  const count = str.match(vowels);
-  return count ? count.length : 0;
+  const vowels = /a|e|i|o|u/gi;
+  const result: string = str.match(vowels)?.join("") || "";
+  const count = result.length;
+  return count;
 }
 
 rl.question("Enter a string: ", (answaer) => {
