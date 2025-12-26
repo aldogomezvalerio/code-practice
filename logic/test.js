@@ -1,11 +1,7 @@
-"use strict";
-exports.__esModule = true;
-const readline = require('readline');
-let num = 0;
-
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-console.log(num);
+let x = 1;
+let y = 0;
+for (let i = 1; i < 20; i++) {
+  y = i + x;
+  console.log(y);
+  x += i
+}
