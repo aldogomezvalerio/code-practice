@@ -10,8 +10,6 @@ function isFormatValid(
   const phoneRegex =
     /^\+?(\d{1,3})?[-.\s]?\(?(\d{1,4})?\)?[-.\s]?(\d{1,4})[-.\s]?(\d{1,9})$/;
   const moneyRegex = /^\$?(\d{1,3},?)*\.?\d{0,2}$/;
-  let result: boolean = true;
-  let msg: string = "";
 
   switch (format) {
     case "email":
