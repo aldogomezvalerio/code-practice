@@ -2,11 +2,16 @@
 let numList: number[] = [10, 5, 8, 20, 3];
 let maxNum: number = 0;
 
-for (let i = 0; i < numList.length; i++) {
-  maxNum = numList[i];
-  for (let j = 0; j < numList.length; j++) {
-    maxNum = maxNum > numList[j] ? maxNum : numList[j];
+function getGreatest(myArray: number[]): number {
+  for (let i = 0; i < numList.length; i++) {
+    maxNum = numList[i];
+    for (let j = 0; j < numList.length; j++) {
+      maxNum = maxNum > numList[j] ? maxNum : numList[j];
+    }
   }
+  return maxNum;
 }
 
-console.log(`The greatest numerin ${numList} is ${maxNum}`);
+maxNum = getGreatest(numList);
+
+console.log(`The greatest number in the list ${numList} is: ${maxNum}`);
