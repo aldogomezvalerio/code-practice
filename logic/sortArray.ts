@@ -1,5 +1,7 @@
-let myArray = [5, 3, 8, 1, 2];
-let tempArray = [];
+//Logic to sort an array in ascending order without using built-in sort functions
+
+let myArray: number[]  = [5, 3, 8, 1, 2];
+let tempArray: number[] = [];
 let minNum: number = 0;
 let arrayLength: number = myArray.length;
 
@@ -11,7 +13,6 @@ for (let i = 0; i < arrayLength; i++) {
     tempArray.push(minNum);
     myArray.splice(myArray.indexOf(minNum), 1);
     minNum = 0; 
-  
 }
 
 console.log(tempArray);
