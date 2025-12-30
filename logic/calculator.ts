@@ -5,29 +5,32 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question("Enter first number: ", (firstNum) => {
-  rl.question(
-    "Enter the map operator: \n+ for addition\n- for subtraction\n* for multiplication\n/ for division\n",
-    (operator) => {
+rl.question(
+  "Select the operator: \n+ for addition\n- for subtraction\n* for multiplication\n/ for division\n",
+  (operator) => {
+    rl.question("Enter first number: ", (firstNum) => {
       rl.question("Enter second number: ", (secondNum) => {
-        let result : number;
-        const num1= parseFloat(firstNum);
-        const num2= parseFloat(secondNum);
+        let result: number = 0;
+        const num1 = parseFloat(firstNum);
+        const num2 = parseFloat(secondNum);
         switch (operator) {
           case "+":
             result = num1 + num2;
-            break;  
-            case "-":
+            break;
+          case "-":
             result = num1 - num2;
             break;
-            case "*":
+          case "*":
             result = num1 * num2;
             break;
-            case "/":
+          case "/":
             result = num1 / num2;
-            break;  
+            break;
+        }
+        console.log(`${num1} ${operator} ${num2} = ${result}`);
 
+        rl.close();
       });
-    }
-  );
-});
+    });
+  }
+);
