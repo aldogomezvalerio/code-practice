@@ -1,0 +1,1 @@
+let cards : [{ id: number, type: "credit" | "debit", balance: number }] = 

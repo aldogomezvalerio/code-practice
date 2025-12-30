@@ -1,3 +1,4 @@
+//Code of a simple calculator with Typescript
 import * as readline from "readline";
 
 const rl = readline.createInterface({
