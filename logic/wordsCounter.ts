@@ -12,8 +12,10 @@ rl.question('Please enter a string: ', (answer) => {
 });
 
 export function wordsCounter (str: string): number {
-  const result = str.trim().split(/\s+/).filter(word => word.length > 0);
-  return result.length;
+  //const result = str.trim().split(/\s+/).filter(word => word.length > 0);
+  //return result.length;
+  const result = str.match(/\b\w+\b/g);
+  return result ? result.length : 0;
 }
 
 
