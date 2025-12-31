@@ -1,13 +1,15 @@
+const word1 = "caso";
+const word2 = "seco";
 
-//0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181
+let wArray1 = word1.split("").sort();
+let wArray2 = word2.split("").sort();
 
-let n1 = 0;
-let n2 = 1;
-
-const myArray = [0];
-
-for (let i = 0; i < 20; i++) {
-  console.log(n1);
-  n1 = n1 + n2;
-  n2 = n1 - n2;
+if (wArray1.length !== wArray2.length) {
+  console.log(`${word1} and ${word2} aren't anagrams words.`);
+} else if (wArray1.join("") === wArray2.join("")) {
+  console.log(`${word1} and ${word2} are anagrams words.`);
+} else {
+  console.log(`${word1} and ${word2} aren't anagrams words.`);
 }
+
+//console.log(word1.split("").sort());
