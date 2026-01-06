@@ -1,9 +1,9 @@
-//This code generate a ramdom password 
+//This code generate a ramdom password
 import { Color } from "react-bootstrap/esm/types";
 const passRegExpr =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 let pass: string = "";
-const specialChars:string[] = ["@", "$", "!", "%", "*", "?", "&"];
+const specialChars: string[] = ["@", "$", "!", "%", "*", "?", "&"];
 let cont: number = 0;
 
 const patternArray: (() => number)[] = [
@@ -12,7 +12,6 @@ const patternArray: (() => number)[] = [
   () => Math.floor(Math.random() * (57 - 48 + 1)) + 48,
 ];
 
-
 for (let i = 0; i < 15; i++) {
   pass += String.fromCharCode(patternArray[Math.floor(cont)]());
   cont = cont < 3 ? cont + 1 : 0;
@@ -20,4 +19,4 @@ for (let i = 0; i < 15; i++) {
 
 pass += specialChars[Math.floor(Math.random() * 6)];
 
-console.log(pass);
+console.log("Random password: " + pass);
