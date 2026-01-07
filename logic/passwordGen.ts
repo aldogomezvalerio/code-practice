@@ -1,5 +1,5 @@
 //This code generate a ramdom password
-import { Color } from "react-bootstrap/esm/types";
+import * as readline from "readline";
 const passRegExpr =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 let pass: string = "";
