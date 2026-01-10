@@ -1,13 +1,28 @@
-function mostInArray(arr = []) {
-  let max = 0;
-  let newArray = [...new Set(arr)];
-  let filter = [];
-
-  for (let i = 0; i < newArray.length; i++) {
-    filter = arr.filter((item) => item === newArray[i]);
-    max = filter.length > max ? arr[i] : max;
-  }
-  return max;
+function isSymmetric(matrix) {
+    var n = matrix.length;
+    for (var i = 0; i < n; i++) {
+        for (var j = i + 1; j < n; j++) {
+            if (matrix[i][j] !== matrix[j][i]) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
-console.log(mostInArray([1, 3, 2, 3, 4, 5, 1, 3, 2, 1, 1, 1, 1]));
+
+// Example usage:
+var matrix1 = [
+    [1, 2, 3],
+    [2, 4, 5],
+    [3, 5, 6]
+];
+
+var matrix2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log(isSymmetric(matrix1)); // true
+console.log(isSymmetric(matrix2)); // false
