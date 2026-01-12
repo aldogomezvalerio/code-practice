@@ -1,28 +1,31 @@
-function isSymmetric(matrix: number[][]): boolean {
+/**
+ * Extracts the secondary diagonal from a square matrix.
+ * * @param matrix - A 2D array representing a square matrix (n x n)
+ * @returns An array containing the elements of the secondary diagonal
+ */
+function getSecondaryDiagonal<T>(matrix: T[][]): T[] {
+  const n = matrix.length;
+  const diagonal: T[] = [];
 
-  for (let i = 0; i < matrix.length; i++) {
-    for (let j = i + 1; j < matrix.length; j++) {
-      if (matrix[i][j] !== matrix[j][i]) {
-        return false;
-      }
+  for (let i = 0; i < n; i++) {
+    // The secondary diagonal follows the rule: column = n - 1 - row
+    const columnIndex = n - 1 - i;
+    //7
+    // Safety check to ensure the row exists and has the required column
+    if (matrix[i] && matrix[i][columnIndex] !== undefined) {
+      diagonal.push(matrix[i][columnIndex]);
     }
   }
 
-  return true;
+  return diagonal;
 }
 
-// Example usage:
-var matrix1 = [
-    [1, 2, 3],
-    [2, 4, 5],
-    [3, 5, 6]
+// --- Example Usage ---
+const squareMatrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ];
 
-var matrix2 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-
-console.log(isSymmetric(matrix1)); // true
-console.log(isSymmetric(matrix2)); // false
+const result = getSecondaryDiagonal(squareMatrix);
+console.log(result); // Output: [3, 5, 7]
