@@ -14,4 +14,4 @@ function permute(str) {
     }
     return result;
 }
-console.log(permute("abcd"));
+console.log(permute("abc"));

@@ -1,5 +1,5 @@
 //Permute string
-function permute(str: string): string[] {
+function permute<T extends string>(str: T): string[] {
   if (str.length === 1) return [str];
 
   const result: string[] = [];
